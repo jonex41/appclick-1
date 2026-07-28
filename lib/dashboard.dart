@@ -1,0 +1,17 @@
+
+import 'package:flutter/material.dart';
+
+class Dashboard extends StatelessWidget {
+  const Dashboard({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Dashboard"), backgroundColor: Colors.amber,),
+      body: Column(children: [
+        Text("User is Logged in ")
+      ],),
+      
+    );
+  }
+}
