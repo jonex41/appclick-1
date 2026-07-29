@@ -171,3 +171,6 @@ class FirstClass extends StatelessWidget {
 //Row()- it allows you to place widgets horizontally
 //Button- it gives you access to onpress
 //Scaffold()- it allows you to syle your screen and gives you access to AppBar, bottomnavigation, backgroundcolor
+
+// name = agudajohn5
+// 	email = aguda.omotayo@rydepro.com
