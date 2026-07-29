@@ -186,10 +186,12 @@ class Calculator extends StatelessWidget {
                   ),
                 ),
               ),
+
             ],
           ),
+          
         ],
       ),
-    );
+    ),
   }
 }
