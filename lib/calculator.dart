@@ -300,7 +300,7 @@ class Calculator extends StatelessWidget {
                 width: 70,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Color(0xFF9B827A),
+                  color: Color(0xFF702005),
                 ),
                 child: Center(
                   child: Text(
