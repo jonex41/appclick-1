@@ -36,7 +36,7 @@ class Calculator extends StatelessWidget {
                 height: 70,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.amberAccent,
+                  color: Color(0xFFF8B4AE),
                 ),
                 child: Center(
                   child: Text(
@@ -50,7 +50,7 @@ class Calculator extends StatelessWidget {
                 width: 70,
                 height: 70,
                 decoration: BoxDecoration(
-                  color: Colors.blueGrey,
+                  color: Color(0xFF132734),
                   shape: BoxShape.circle,
                 ),
                 child: Center(
@@ -69,7 +69,7 @@ class Calculator extends StatelessWidget {
                 height: 70,
                 width: 70,
                 decoration: BoxDecoration(
-                  color: Colors.blueGrey,
+                  color: Color(0xFF132734),
                   shape: BoxShape.circle,
                 ),
                 child: Center(
@@ -89,12 +89,12 @@ class Calculator extends StatelessWidget {
                 width: 70,
 
                 decoration: BoxDecoration(
-                  color: Colors.blueGrey,
+                  color: Color(0xFF132734),
                   shape: BoxShape.circle,
                 ),
                 child: Center(
                   child: Text(
-                    "D",
+                    "÷",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 30,
@@ -115,7 +115,7 @@ class Calculator extends StatelessWidget {
                 width: 70,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.blueGrey,
+                  color: Color(0xFF4A2216),
                 ),
                 child: Center(
                   child: Text(
@@ -134,7 +134,7 @@ class Calculator extends StatelessWidget {
                 width: 70,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.blueGrey,
+                  color: Color(0xFF4A2216),
                 ),
                 child: Center(
                   child: Text(
@@ -153,7 +153,7 @@ class Calculator extends StatelessWidget {
                 width: 70,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.blueGrey,
+                  color: Color(0xFF4A2216),
                 ),
                 child: Center(
                   child: Text(
@@ -172,7 +172,7 @@ class Calculator extends StatelessWidget {
                 width: 70,
 
                 decoration: BoxDecoration(
-                  color: Colors.blueGrey,
+                  color: Color(0xFF132734),
                   shape: BoxShape.circle,
                 ),
                 child: Center(
@@ -186,12 +186,252 @@ class Calculator extends StatelessWidget {
                   ),
                 ),
               ),
-
             ],
           ),
-          
+          SizedBox(height: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                height: 70,
+                width: 70,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0xFF4A2216),
+                ),
+                child: Center(
+                  child: Text(
+                    "4",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 20),
+              Container(
+                height: 70,
+                width: 70,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0xFF4A2216),
+                ),
+                child: Center(
+                  child: Text(
+                    "5",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 20),
+              Container(
+                height: 70,
+                width: 70,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0xFF4A2216),
+                ),
+                child: Center(
+                  child: Text(
+                    "6",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 20),
+              Container(
+                height: 70,
+                width: 70,
+
+                decoration: BoxDecoration(
+                  color: Color(0xFF132734),
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: Text(
+                    "-",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                height: 70,
+                width: 70,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0xFF4A2216),
+                ),
+                child: Center(
+                  child: Text(
+                    "1",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 20),
+              Container(
+                height: 70,
+                width: 70,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0xFF9B827A),
+                ),
+                child: Center(
+                  child: Text(
+                    "2",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 20),
+              Container(
+                height: 70,
+                width: 70,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0xFF4A2216),
+                ),
+                child: Center(
+                  child: Text(
+                    "3",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 20),
+              Container(
+                height: 70,
+                width: 70,
+
+                decoration: BoxDecoration(
+                  color: Color(0xFF132734),
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: Text(
+                    "+",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                height: 70,
+                width: 70,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0xFF4A2216),
+                ),
+                child: Center(
+                  child: Text(
+                    "0",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 20),
+              Container(
+                height: 70,
+                width: 70,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0xFF4A2216),
+                ),
+                child: Center(
+                  child: Text(
+                    ".",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 20),
+              Container(
+                height: 70,
+                width: 70,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0xFF4A2216),
+                ),
+                child: Center(
+                  child: Icon(Icons.backspace, color: Colors.white, size: 30),
+                ),
+              ),
+              SizedBox(width: 20),
+              Container(
+                height: 70,
+                width: 70,
+
+                decoration: BoxDecoration(
+                  color: Color(0xFF7DD3F7),
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: Text(
+                    "=",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
-    ),
+    );
   }
 }
