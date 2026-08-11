@@ -1,7 +1,5 @@
-import 'package:first_app/calculator.dart';
-import 'package:first_app/dashboard.dart';
-import 'package:first_app/login.dart';
-import 'package:first_app/todo.dart';
+import 'package:first_app/todo_recap.dart';
+import 'package:first_app/todo_recap2.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,6 +9,6 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'First App', home: TodoScreen());
+    return MaterialApp(title: 'First App', home: TodoRecap2());
   }
 }

@@ -14,6 +14,8 @@ class _TodoScreenState extends State<TodoScreen> {
     {"value": "i am going to school", "isChecked": false},
     {"value": "i am going home", "isChecked": false},
   ];
+  // 0 1 2 3 4 5 6 7 8
+  //[1,2,3,4,5,6,7,8,9]
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +68,7 @@ class _TodoScreenState extends State<TodoScreen> {
                           "value": controller.text,
                           "isChecked": false,
                         });
-                         controller.text = '';
+                        controller.text = '';
                         setState(() {});
                       },
                       child: Container(
@@ -111,7 +113,17 @@ class _TodoScreenState extends State<TodoScreen> {
                           : null,
                     ),
                   ),
+                  // subtitle: Text("Hello"),
                   tileColor: Colors.white,
+                  trailing: GestureDetector(
+                    onTap: () {
+                      //this is to remove from the list
+                      list.removeAt(index);
+                      //this is to allow it to reflect on the ui
+                      setState(() {});
+                    },
+                    child: Icon(Icons.delete, color: Colors.red),
+                  ),
                 ),
               ),
               SizedBox(height: 10),
