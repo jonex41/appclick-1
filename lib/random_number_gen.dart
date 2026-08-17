@@ -47,6 +47,7 @@ class _RandomNumberGenScreenState extends State<RandomNumberGenScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  //min start
                   Container(
                     padding: EdgeInsets.all(8),
                     decoration: BoxDecoration(
@@ -87,9 +88,9 @@ class _RandomNumberGenScreenState extends State<RandomNumberGenScreen> {
                       ],
                     ),
                   ),
-
+                //min end
                   SizedBox(width: 30),
-
+                  //max start
                   Container(
                     padding: EdgeInsets.all(8),
                     decoration: BoxDecoration(
@@ -130,9 +131,11 @@ class _RandomNumberGenScreenState extends State<RandomNumberGenScreen> {
                       ],
                     ),
                   ),
+                  //max end
                 ],
               ),
               SizedBox(height: 100),
+              //result start
               Container(
                 height: 100,
                 width: 200,
@@ -170,7 +173,9 @@ class _RandomNumberGenScreenState extends State<RandomNumberGenScreen> {
                   ],
                 ),
               ),
+             //result end
               SizedBox(height: 50),
+              //Button to generate random number
               ElevatedButton(
                 onPressed: () {
                   getRandomNumber();
@@ -178,6 +183,7 @@ class _RandomNumberGenScreenState extends State<RandomNumberGenScreen> {
                 },
                 child: Text("Generate Number"),
               ),
+                //Button to generate random number
             ],
           ),
         ),
