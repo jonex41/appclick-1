@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "101888952971",
+    "project_id": "appclick-81111",
+    "storage_bucket": "appclick-81111.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:101888952971:android:06b6c4c54f4180abf3228e",
+        "android_client_info": {
+          "package_name": "com.example.first_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5QrVGmv3cDndk8h7_fz7E3n-kZq1Fgmk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
