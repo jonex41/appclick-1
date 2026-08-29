@@ -1,7 +1,7 @@
-
 import 'package:first_app/dashboard.dart';
 import 'package:first_app/register.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -9,6 +9,47 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
+  Future<bool> login(String email, String password) async {
+    try {
+      final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: email.trim(),
+        password: password,
+      );
+
+      return true;
+    } on FirebaseAuthException catch (e) {
+      switch (e.code) {
+        case 'invalid-credential':
+          print('Invalid email or password.');
+          break;
+
+        case 'user-not-found':
+          print('No account found with this email.');
+          break;
+
+        case 'wrong-password':
+          print('Incorrect password.');
+          break;
+
+        case 'invalid-email':
+          print('Invalid email address.');
+          break;
+
+        case 'user-disabled':
+          print('This account has been disabled.');
+          break;
+
+        default:
+          print('Login failed: ${e.message}');
+      }
+
+      return false;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,6 +82,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(height: 10),
               TextField(
+                controller: emailController,
                 keyboardType: TextInputType.emailAddress,
 
                 decoration: InputDecoration(
@@ -72,6 +114,7 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(height: 10),
 
               TextField(
+                controller: passwordController,
                 keyboardType: TextInputType.number,
 
                 decoration: InputDecoration(
@@ -90,29 +133,41 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               SizedBox(height: 50),
-              TextButton(onPressed: (){
-                 Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>  RegisterPage(),
-                      ),
-                    );
-
-              }, child: Text("Go to Register")),
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RegisterPage()),
+                  );
+                },
+                child: Text("Go to Register"),
+              ),
               SizedBox(height: 20),
               Align(
                 alignment: Alignment.center,
                 child: ElevatedButton(
-                  onPressed: () {
+                  onPressed: () async {
                     // Navigator.replace(context, oldRoute: oldRoute, newRoute: newRoute)
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const Dashboard(),
-                      ),
+
+                    bool isLogin = await login(
+                      emailController.text,
+                      passwordController.text,
                     );
+                    if (isLogin) {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Dashboard(),
+                        ),
+                      );
+                    } else {
+                      print("Something went wrong");
+                    }
                   },
-                  child: Text("Go to Dashboard", style: TextStyle(fontSize: 30)),
+                  child: Text(
+                    "Go to Dashboard",
+                    style: TextStyle(fontSize: 30),
+                  ),
                 ),
               ),
             ],

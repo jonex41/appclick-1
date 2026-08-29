@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:first_app/chat_bot_screen.dart';
+import 'package:first_app/login.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
@@ -18,6 +19,6 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'First App', home: ChatBotScreen());
+    return MaterialApp(title: 'First App', home: LoginPage());
   }
 }
