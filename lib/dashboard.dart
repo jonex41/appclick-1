@@ -18,7 +18,16 @@ class Dashboard extends StatelessWidget {
     }
 
     return Scaffold(
-      appBar: AppBar(title: Text("Dashboard"), backgroundColor: Colors.amber),
+      appBar: AppBar(
+        title: Text("Dashboard"),
+        backgroundColor: Colors.amber,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 15),
+            child: Icon(Icons.search, color: Colors.white),
+          ),
+        ],
+      ),
       body: FutureBuilder<List<Map<String, dynamic>>>(
         future: fetchUsers(),
         builder: (context, snapshot) {
@@ -43,7 +52,6 @@ class Dashboard extends StatelessWidget {
             itemCount: users.length,
             itemBuilder: (context, index) {
               final user = users[index];
-              
 
               return GestureDetector(
                 onTap: () {
@@ -56,6 +64,15 @@ class Dashboard extends StatelessWidget {
                   );
                 },
                 child: ListTile(
+                  leading: Container(
+                    padding: EdgeInsets.all(12),
+                    child: Icon(Icons.person_2, color: Colors.white),
+                    decoration: BoxDecoration(
+                      color: Colors.amber,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+
                   title: Text(user['name'] ?? ''),
                   subtitle: Text(user['email'] ?? ''),
                 ),
